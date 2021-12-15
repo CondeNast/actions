@@ -1,0 +1,11 @@
+name: Build container tag
+inputs:
+  tag:
+    required: true
+outputs:
+  sanitized_tag:
+    value: ${{ steps.sanitize_tag.outputs.sanitized_tag }}
+runs:
+  using: "node12"
+  pre: "pre.js"
+  main: "index.js"
