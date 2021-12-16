@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: sanitize-docker-tag
-        uses: condenast/actions/sanitize-docker-tag@sanitize-docker-tag
+        uses: condenast/actions/sanitize-docker-tag@main
         with:
           tag: //I'M " ` unsanitized .,-/
       - name: echo sanitized tag
