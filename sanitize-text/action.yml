@@ -1,0 +1,10 @@
+name: Build container text
+inputs:
+  text:
+    required: true
+outputs:
+  sanitized_text:
+    description: "Sanitized text"
+runs:
+  using: "node16"
+  main: "dist/index.js"

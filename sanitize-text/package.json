@@ -1,5 +1,5 @@
 {
-  "name": "sanitize-docker-tag",
+  "name": "sanitize-text",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

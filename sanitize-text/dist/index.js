@@ -1679,9 +1679,9 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(935);
 
 try {
-  const tag           = core.getInput("tag");
-  const sanitized_tag = tag.replace(/[^a-zA-Z0-9_.-]/g,"-");
-  core.setOutput("sanitized_tag", sanitized_tag);
+  const text           = core.getInput("text");
+  const sanitized_text = text.replace(/[^a-zA-Z0-9_.-]/g,"-");
+  core.setOutput("sanitized_text", sanitized_text);
 } catch (error) {
   core.setFailed(error.message);
 }

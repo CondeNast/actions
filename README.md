@@ -6,20 +6,20 @@ https://github.com/actions/toolkit/blob/master/README.md
 
 🐉
 
-## sanitize-docker-tag
-This action returns a safe tag to push an image to a registry
+## sanitize-text
+This action returns a sanitized text
 ### inputs
-- tag: **(Required)** Text to sanitize
+- text: **(Required)** Text to sanitize
 
 ### outputs
-- sanitized_tag: Clean version of the tag
+- sanitized_text: Clean version of the text
 
 ### Example usage
 ```yaml
-- id: sanitize-docker-tag
-  uses: condenast/actions/sanitize-docker-tag@v1
+- id: sanitize-text
+  uses: condenast/actions/sanitize-text@v1
   with:
-    tag: //I'M " ` unsanitized .,-/
+    text: //I'M " ` unsanitized .,-/
 - name: build docker image
-  run: docker build -t image:${{ steps.sanitize-docker-tag.outputs.sanitized_tag }} .
+  run: docker build -t image:${{ steps.sanitize-text.outputs.sanitized_text }} .
 ```

@@ -4,12 +4,12 @@ on:
   - push
 
 jobs:
-  sanitize-docker-tag:
+  sanitize-text:
     runs-on: ubuntu-latest
     steps:
-      - id: sanitize-docker-tag
-        uses: condenast/actions/sanitize-docker-tag@main
+      - id: sanitize-text
+        uses: condenast/actions/sanitize-text@sanitize-text
         with:
-          tag: //I'M " ` unsanitized .,-/
-      - name: echo sanitized tag
-        run: echo ${{ steps.sanitize-docker-tag.outputs.sanitized_tag }}
+          text: //I'M " ` unsanitized .,-/
+      - name: echo sanitized text
+        run: echo ${{ steps.sanitize-text.outputs.sanitized_text }}
