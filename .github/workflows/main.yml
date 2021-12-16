@@ -4,12 +4,12 @@ on:
   - push
 
 jobs:
-  sanitize_docker_tag:
+  sanitize-docker-tag:
     runs-on: ubuntu-latest
     steps:
-      - id: sanitize_docker_tag
-        uses: condenast/actions/sanitize-docker-tag@sanitize-docker-tag
+      - id: sanitize-docker-tag
+        uses: condenast/actions/sanitize-docker-tag@master
         with:
           tag: //I'M " ` unsanitized .,-/
       - name: echo sanitized tag
-        run: echo ${{ steps.sanitize_docker_tag.outputs.sanitized_tag }}
+        run: echo ${{ steps.sanitize-docker-tag.outputs.sanitized_tag }}
