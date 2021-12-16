@@ -4,8 +4,7 @@ inputs:
     required: true
 outputs:
   sanitized_tag:
-    value: ${{ steps.sanitize_tag.outputs.sanitized_tag }}
+    description: "Sanitized tag"
 runs:
   using: "node12"
-  pre: "pre.js"
-  main: "index.js"
+  main: "dist/index.js"

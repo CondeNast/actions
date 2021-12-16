@@ -9,8 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - id: sanitize_docker_tag
-        uses: ./sanitize_docker_tag
+        uses: condenast/actions/sanitize-docker-tag@sanitize-docker-tag
         with:
           tag: //I'M " ` unsanitized .,-/
-      - name:
+      - name: echo sanitized tag
         run: echo ${{ steps.sanitize_docker_tag.outputs.sanitized_tag }}
