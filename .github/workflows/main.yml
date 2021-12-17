@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: sanitize-text
-        uses: condenast/actions/sanitize-text@sanitize-text
+        uses: condenast/actions/sanitize-text@v1
         with:
           text: //I'M " ` unsanitized .,-/
       - name: echo sanitized text
